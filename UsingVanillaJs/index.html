@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classy Modern Smart Watch</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Product Detail Section -->
+    <div class="container">
+      <div class="product-details">
+        <!-- Product Image -->
+        <div class="product-image">
+          <img
+            id="main-image"
+            src="https://s3-alpha-sig.figma.com/img/2976/f5db/6ba4ac91a82300df8837e8cb1806acad?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JWohOss7IT3sFIlcvK51H8ZzbWybTA1iKcSGv~PA8-U~YPU~RkdcI2HWobSAmm-Fg~yuq2QqUZ0zJk29p92tuZjXd~eEq1QhvjnmcCbZDI3OJll-d5QdTF8Eh0rLZ84QPh1tUHhHHTjMmd7kipU4vXQmNeYMXIkdA5bvJb8Va2WMHSNrL-yNgpc3I0H~g4uovmHKYDsGEY~HVdxnW8kFTZVTb4lO1teRyTNrVVPZZzb7kpBRmhcdJTw~Lprkb3zUQllVs06trpyGIm8LzxsVH2CYSo7qvvvyLCmlDS2co5UM~XDu3TMvatS3lAObPy4bHd~-m1jagpGa6HUttU~mng__"
+            alt="Smart Watch"
+          />
+        </div>
+        <!-- Product Info -->
+        <div class="product-info">
+          <h1>Classy Modern Smart Watch</h1>
+          <div class="rating">
+            <span class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="reviews">(2 Reviews)</span>
+          </div>
+
+          <p class="price"><del>$99.00</del> <span>$79.00</span></p>
+          <p class="description">
+            I must explain to you how all this mistaken idea of denoun cing ple
+            praising pain was born and I will give you a complete account of the
+            system, and expound the actual teaching.
+          </p>
+
+          <!-- Band Color -->
+          <div class="options">
+            <h3 style="color: #364A63">Band Color</h3>
+            <div class="colors">
+              <span
+                class="color purple active"
+                data-color="purple"
+                data-image="assets/watch-purple.png"
+              ></span>
+              <span
+                class="color cyan"
+                data-color="cyan"
+                data-image="assets/watch-cyan.png"
+              ></span>
+              <span
+                class="color black"
+                data-color="black"
+                data-image="assets/watch-black.png"
+              ></span>
+            </div>
+          </div>
+
+          <!-- Wrist Size -->
+          <div class="options">
+            <h3>Wrist Size</h3>
+            <div class="sizes">
+              <button class="size" data-size="S">S</button>
+              <button class="size active" data-size="M">M</button>
+              <button class="size" data-size="L">L</button>
+              <button class="size" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <!-- Quantity & Add to Cart -->
+          <div class="cart-actions">
+            <div class="quantity">
+              <button id="decrease">-</button>
+              <span id="quantity">1</span>
+              <button id="increase">+</button>
+            </div>
+            <button id="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Checkout Button -->
+    <div id="checkout-button" class="checkout-button hidden">
+      Checkout <span id="cart-count">0</span>
+    </div>
+
+    <!-- Modal -->
+    <div id="cart-modal" class="hidden">
+      <div class="modal-header">
+        <h2>Your Cart</h2>
+        <button id="clear-cart">Clear Cart</button>
+      </div>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Rows will be added dynamically -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total</td>
+            <td id="total-quantity">0</td>
+            <td id="total-price">$0</td>
+          </tr>
+        </tfoot>
+      </table>
+    
+      <div class="modal-buttons">
+        <button id="continue-shopping">Continue Shopping</button>
+        <button id="checkout">Checkout</button>
+      </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
